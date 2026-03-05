@@ -1,11 +1,8 @@
 version: 0.2
-
 phases:
   build:
     commands:
-      - echo "Building static site..."
-
+      - echo "Nothing to compile, just packaging static files"
 artifacts:
   files:
-    - '**/*'
-``
+    - index.html
