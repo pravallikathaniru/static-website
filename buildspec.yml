@@ -5,4 +5,4 @@ phases:
       - echo "Nothing to compile, just packaging static files"
 artifacts:
   files:
-    - index.html
+    - */**
