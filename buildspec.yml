@@ -1,8 +1,14 @@
 version: 0.2
+
 phases:
+  install:
+    commands:
+      - echo "Installing dependencies..."
   build:
     commands:
-      - echo "Nothing to compile, just packaging static files"
+      - echo "Building static site..."
+      - aws s3 sync . s3://$S3_BUCKET_NAME --delete
 artifacts:
   files:
-    - **/*
+    - '**/*'
+
